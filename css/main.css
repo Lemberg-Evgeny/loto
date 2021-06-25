@@ -41,3 +41,12 @@ th {
     font-size: 2em;
     text-shadow: 2px 2px 10px black;
 }
+
+@media screen and (max-width: 768px) {
+    .ball,
+    .ball-last {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1em;
+    }
+  }
