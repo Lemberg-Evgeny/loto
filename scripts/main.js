@@ -46,7 +46,7 @@ for (let i = 0; i < sixNum.length; i++) {
       <tr class="border-info shadow">
           <th scope="row" class="number_ball">${lotoBox[sixNum[i].index]}</th>
           <td>${sixNum[i].val}</td>
-          <td>${games}</td>
+          <td>10.000.000</td>
      </tr>
     `;
 }
