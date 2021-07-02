@@ -15,7 +15,41 @@
 
 <body>
 
+
+    <div id="myModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <div class="container mt-1">
+
+        <label for="inputGames">מספר הגרלות</label>
+        <div class="input-group mb-2">
+            <input id="inputGames" type="number" class="form-control-sm" value="1000">
+            <div class="input-group-append">
+                <button class="btn btn-info shadow text-uppercase" onclick="start()">start</button>
+            </div>
+        </div>
+
+    </div>
+
     <div class="container d-flex justify-content-center align-items-center shadow p-3">
+
         <div class="row">
 
             <div class="col col-md-2 ball"></div>
@@ -26,9 +60,7 @@
             <div class="col col-md-2 ball"></div>
 
             <div class="col col-md-6 rounded-circle ball-last"></div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <button class="btn btn-info shadow text-uppercase btn-sm " onclick="start()">לחדש</button>
-            </div>
+
 
         </div>
     </div>
@@ -39,7 +71,7 @@
                 <tr>
                     <th scope="col">מספר כדור</th>
                     <th scope="col">כמה פעמים יצאה מספר</th>
-                    <th scope="col">מספר הגרלות</th>
+                    <th scope="col">כמות הגרלות</th>
                 </tr>
             </thead>
             <tbody id="statistic_table">
@@ -48,8 +80,9 @@
         </table>
     </div>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/bootstrap.bundle.min.js"></script>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/bootstrap.bundle.min.js"></script>
 
 </body>
 
