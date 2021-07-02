@@ -28,15 +28,16 @@ const start = () => {
         counter.push(0); //Заполнение счётчика 37ю нулями.
     }
 
-    for (let i = 0; i <= games; i++) {
-        let numBall = lotoBox[Math.floor(Math.random() * lotoBox
-            .length)]; //Случайный выпавший шар с номером из лотомата.
-        let sNumBall = strongestNum[Math.floor(Math.random() * strongestNum.length)];
-        counter[numBall - 1] += 1; //Увеличеваем значение в счётчике по индексу номера шара -1.
-        sCounter[sNumBall - 1] +=
-            1; //Увеличеваем значение в счётчике по индексу номера закрепляющего шара -1.
-    }
 
+for (let g = 0; g < games; g++) {
+    
+    for (let i = 0; i < 12; i++) {
+        let numBall = lotoBox[Math.floor(Math.random() * lotoBox.length)]; //Случайный выпавший шар с номером из лотомата.
+        counter[numBall - 1] += 1; //Увеличеваем значение в счётчике по индексу номера шара -1.
+    }
+    let sNumBall = strongestNum[Math.floor(Math.random() * strongestNum.length)];
+    sCounter[sNumBall - 1] += 1; //Увеличеваем значение в счётчике по индексу номера закрепляющего шара -1.
+}
 
     document.querySelector('.ball-last').innerHTML = `<span>${sCounter.indexOf(Math.max.apply(null, sCounter)) + 1}</span>`;
 
